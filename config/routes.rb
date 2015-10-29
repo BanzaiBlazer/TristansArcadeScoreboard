@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   resources :players
   resources :employees
 
-  get '/', to: 'employees#index'
+  get '/', to: 'employees#login'
+  get 'employees/', to: 'employees#login'
+  # get '/profile', to: 'employees#show'
+  post 'login_verify', to: 'employees#login_verify'
+  get '/show', to:'employees#show'
+
+  get '/logout', to: 'employees#logout'
+  # get 'employees/', to: 'employees#login'
  
 end
