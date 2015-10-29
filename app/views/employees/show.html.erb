@@ -3,17 +3,17 @@
 <% if session[:employee_id] %>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Hello </strong>
   <%= @employee.name %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @employee.password %>
-</p>
+<%= link_to 'User Scores', '/scores' %>
+
+<br>
+<br>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<%= link_to 'Logout', '/logout' %>
 
 <% else %>
 
