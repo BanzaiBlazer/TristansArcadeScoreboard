@@ -14,7 +14,7 @@
   <tbody>
     <% @scores.each do |score| %>
       <tr>
-        <td><%= score.lowest_time %></td>
+        <td><%= number_with_precision(score.lowest_time / 1000.0, precision: 3) %></td>
         <td><%= score.player %></td>
 <!--         <td><%= link_to 'Show', score %></td> -->
         <td><%= link_to 'Edit', edit_score_path(score) %></td>
