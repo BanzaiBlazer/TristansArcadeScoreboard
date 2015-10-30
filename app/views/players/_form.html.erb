@@ -15,10 +15,17 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+
+
+<!--   <div class="field">
     <%= f.label :picture %><br>
     <%= f.text_area :picture %>
-  </div>
+  </div> -->
+
+<%= form_for @player, {url: players_path, html: { multipart: true }} do |f| %>
+  <%= f.file_field :avatar %>
+<% end %>
+<br>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'pry-rails'
+gem "paperclip", "~> 4.3"
