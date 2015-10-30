@@ -7,13 +7,11 @@
   <%= @employee.name %>
 </p>
 
-<%= link_to 'User Scores', '/scores' %>
+<div>
 
-<br>
-<br>
+<%= link_to 'Edit', edit_employee_path(@employee) %>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Logout', '/logout' %>
+</div>
 
 <% else %>
 
