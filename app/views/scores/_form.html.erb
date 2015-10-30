@@ -16,7 +16,12 @@
     <%= f.number_field :lowest_time %>
   </div>
   <div class="field">
-    <%= f.label :player %><br>
+    <%= f.label :player_id %><br>
+    <!-- 
+      - http://guides.rubyonrails.org/form_helpers.html#making-select-boxes-with-ease
+      - http://apidock.com/rails/ActionView/Helpers/FormTagHelper/select_tag
+      -->
+    <%= f.select :player_id, options_from_collection_for_select(@players, "id", "name") %>
     <%= @score.player %>
   </div>
   <div class="actions">

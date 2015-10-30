@@ -18,6 +18,7 @@ class ScoresController < ApplicationController
 
   # GET /scores/new
   def new
+    @players = Player.all
     @score = Score.new
   end
 

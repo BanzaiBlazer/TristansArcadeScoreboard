@@ -10,5 +10,8 @@
   <%= @score.player %>
 </p>
 
+<% if session[:employee_id] %>
+
 <%= link_to 'Edit', edit_score_path(@score) %> |
+<% end %>
 <%= link_to 'Back', scores_path %>

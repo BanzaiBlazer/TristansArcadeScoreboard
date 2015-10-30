@@ -16,9 +16,15 @@
       <tr>
         <td><%= number_with_precision(score.lowest_time / 1000.0, precision: 3) %></td>
         <td><%= score.player %></td>
+
+
 <!--         <td><%= link_to 'Show', score %></td> -->
+        <% if session[:employee_id] %>
+
         <td><%= link_to 'Edit', edit_score_path(score) %></td>
         <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +32,8 @@
 
 <br>
 
+<% if session[:employee_id] %>
+
 <%= link_to 'New Score', new_score_path %>
+
+<% end %>
